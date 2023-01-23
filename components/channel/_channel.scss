@@ -1,0 +1,23 @@
+@use ".../sass/constants";
+
+// Channel Section
+
+#channel {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  img {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  h3 {
+    margin-bottom: 4px;
+    font-weight: 400;
+  }
+  p {
+    font-size: 15px;
+    color: $grayColor;
+  }
+}

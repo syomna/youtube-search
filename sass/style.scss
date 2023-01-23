@@ -1,0 +1,133 @@
+@import "../components/navbar/navbar";
+@import "../components/filter/filter";
+@import "../components/channel/channel";
+@import "../components/video/video";
+@import "../components/spinner/spinner";
+@import "../components/line-loader/line-loader";
+@use ".../sass/constants";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+// Main Section
+
+main {
+  padding: 30px 17% 10px;
+  background-color: #fafafa;
+  height: 100vh;
+}
+
+@media only screen and (min-width: 970px) {
+  .video .video-infos {
+    display: flex;
+  }
+  .video p {
+    padding-right: 10px;
+  }
+}
+@media only screen and (max-width: 970px) {
+  .video-description,
+  .time-ago {
+    display: none;
+  }
+  .video img {
+    height: 20vh;
+    width: 40vw;
+  }
+  .video .loader {
+    width: 40vw;
+  }
+  main {
+    padding: 30px 22% 10px;
+  }
+  .nav-bar {
+    padding: 0 20%;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .nav-bar {
+    padding: 0;
+    height: 60px;
+    background-color: $redColor;
+    justify-content: stretch;
+    button {
+      background-color: $redColor;
+      color: white;
+      border: none;
+    }
+    input {
+      border: none;
+    }
+  }
+
+  .loader.nav-bar-loader {
+    display: none;
+  }
+  .logo,
+  .video-description,
+  .filtered-results,
+  .time-ago,
+  .search {
+    display: none;
+  }
+  .video .video-info {
+    display: block;
+  }
+  .youtube-icon,
+  .video-info,
+  .filtered-results-min,
+  .min-search {
+    display: block;
+  }
+
+  .spinner-container {
+    display: flex;
+    justify-content: center;
+  }
+  main {
+    padding: 10px 14px;
+  }
+
+  hr {
+    margin: 10px 0 25px;
+  }
+
+  .search-bar {
+    padding-right: 8px;
+  }
+
+  .search-field {
+    width: 60vw;
+    border: none;
+    padding: 0 4px;
+  }
+
+  .select-lists {
+    background-color: $lightShadeGray;
+  }
+
+  .video {
+    h3 {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 3;
+    }
+    p {
+      margin: 4px 0 4px 0;
+    }
+    .duration {
+      right: 20px;
+    }
+
+    .loader {
+      width: 180px;
+    }
+  }
+}

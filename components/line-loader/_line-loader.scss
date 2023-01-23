@@ -1,0 +1,22 @@
+.loader {
+  width: 100vw;
+  height: 3px;
+  position: relative;
+  overflow: hidden;
+  background-color: #ddd;
+  margin: -6px 0 0 0;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+}
+
+.loader:before {
+  content: "";
+  position: absolute;
+  height: 3px;
+  width: 50%;
+  background-color: #e52017;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+}
